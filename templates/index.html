@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- CSS読込 -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+		<title>魚判別サービス</title>
+  </head>
+  <body>
+	<div class="container">
+		<h1 class="jumbotron-heading">Fish Classification</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<canvas id="cvs1" width="224" height="224"></canvas>
+				<br/>
+				<input type="file" id="myfile">
+				<br/>
+				<button class="btn btn-primary my-2" onclick="callPostMethod()">判定する</button>
+			</div>
+			<div class="col-md-6">
+				<table id="output" class="table">
+					<tr>
+						<th class="col-md-2">種別</th>
+						<th class="col-md-2">prediction</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- JS読込 -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/popper.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>
